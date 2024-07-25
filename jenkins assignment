@@ -1,0 +1,36 @@
+ASSIGNMENT-JENKINS
+
+1. Setup webhook trigger for Freestyle job and pipeline job.
+
+2. Trigger Jenkin's parameterized freestyle job/pipeline job using URLfrom a shell file. (Min. 3 parameters).
+
+3. Generate artifact in any Agent and then deploy it to Tomcat server. (use rsync command)
+
+4. Create two Jenkins pipelines in GitHub that checkouts,test, builds and deploys the Java application to a
+tomcat server.
+· Using declarative pipeline with name Jenkinsfile.declarative
+· Using scripted pipeline with name Jenkinsfile.groovy
+
+5. Configure Jenkins to send email notifications containing status of the job. It should include Jobname,
+Build.no, Job URL. Configure your Gmail account with Jenkins. Execute any pipeline job for this.
+
+6. Setup multi-branch pipeline for a repository having 3 branches and setup web-hook trigger for this pipeline.
+Any changes made to the branches of the repository should trigger the respective branch build in Jenkins.
+
+7. Write a pipeline having 4 stages and below configurations
+· Include 2 agents ---- run 2 stages in each agent
+· Triggers ---- periodic and pollscm
+. Setup 3 env variables and use them inside pipeline.
+. For the above 3 env variables pass the values dynamically. (string, choice, boolean)
+· Use any 4 global variables inside pipeline.
+· Conditionals, 3rd stage should run only after 2nd stage success and 4th stage should run only after 3td
+stage success.
+. 3"d stage should run only when checkout branch is master and Dev
+. Include credentials --- secret text, username & Password
+. Post actions to send mail.
+
+8. Pick any 4 freestyle jobs and map them. Create a view. Add user in Jenkins and user should have access
+only to these 4 stream jobs. (Use matching pattern while providing access)
+
+9. Explore on RC (return code) in shell script. Execute a shell script and print different RC at different stages of
+shell script.
